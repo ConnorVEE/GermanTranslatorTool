@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "German Helper",
+  "version": "1.0",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Side Panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
